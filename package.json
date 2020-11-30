@@ -20,6 +20,6 @@
 		"babel-preset-react": "^6.5.0"
 	},
 	"scripts": {
-	    "build": "C:/Users/nat/Desktop/react/node_modules/.bin/babel jsx -d js -w"
+	    "build": "./node_modules/.bin/babel jsx -d js -w"
 	}
 }
