@@ -1,0 +1,25 @@
+{
+	"name": "tooltip",
+	"version": "1.0.0",
+	"discription": "",
+	"main": "script.js",
+	"babel": {
+		"presets": [
+			"react"
+		]
+	},
+	"author": "Natali",
+	"presets": [
+		"@babel/preset-react"
+	],
+	"devDependencies": {
+		"@babel/cli": "^7.12.1",
+		"@babel/core": "^7.12.3",
+		"@babel/preset-react": "^7.12.1",
+		"babel-cli": "^6.9.0",
+		"babel-preset-react": "^6.5.0"
+	},
+	"scripts": {
+	    "build": "C:/Users/nat/Desktop/react/node_modules/.bin/babel jsx -d js -w"
+	}
+}
