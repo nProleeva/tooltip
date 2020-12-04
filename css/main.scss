@@ -1,0 +1,14 @@
+html {
+	position: relative;
+}
+.tooltip {
+	border-bottom:1px solid red;
+}
+.contentTooltip {
+	position: absolute;
+	background-color: #000;
+	color:#fff;
+	padding:10px;
+	max-width: 300px;
+	font-size: 15px;
+}

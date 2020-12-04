@@ -1,7 +1,7 @@
 {
 	"name": "tooltip",
 	"version": "1.0.0",
-	"discription": "",
+	"discription": "tooltip for text from server",
 	"main": "script.js",
 	"babel": {
 		"presets": [
@@ -17,9 +17,25 @@
 		"@babel/core": "^7.12.3",
 		"@babel/preset-react": "^7.12.1",
 		"babel-cli": "^6.9.0",
-		"babel-preset-react": "^6.5.0"
+		"babel-preset-react": "^6.24.1",
+		"sass": "^1.29.0",
+		"sass-loader": "^10.1.0",
+		"webpack": "^5.9.0",
+		"webpack-cli": "^4.2.0"
 	},
 	"scripts": {
-	    "build": "./node_modules/.bin/babel jsx -d js -w"
+		"build": "./node_modules/.bin/webpack -w",
+		"wds-cli": "./node_modules/.bin/webpack-dev-server --inline --hot --module-bind 'css=style-loader!css-loader' --module-bind 'jsx='react-hot-loader!babel-loader' --config web.dev-cli.config.js",
+		"wds": "./node_modules/.bin/webpack-dev-server --config webpack.dev.config.js"
+	},
+	"dependencies": {
+		"babel-core": "^6.26.3",
+		"babel-loader": "^7.1.5",
+		"css-loader": "^5.0.1",
+		"react": "^17.0.1",
+		"react-dom": "^17.0.1",
+		"react-hot-loader": "^4.13.0",
+		"style-loader": "^2.0.0",
+		"webpack-dev-server": "^3.11.0"
 	}
 }

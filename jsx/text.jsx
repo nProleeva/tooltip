@@ -1,5 +1,8 @@
+const React = require('react');
+const ReactDOM = require('react-dom');
+
 const Tooltip = (props)=>{
-	return <span className="tooltip" tooltip={props.tooltip} onMouseEnter={props.mouse} onMouseOut={props.mouse} onClick={props.click} style={{'borderBottom':'1px solid red'}}>{props.children}</span>
+	return <span className="tooltip" tooltip={props.tooltip} onMouseEnter={props.mouse} onMouseOut={props.mouse} onClick={props.click}>{props.children}</span>
 }
 class Text extends React.Component {
 	constructor(props) {
@@ -81,23 +84,18 @@ class Text extends React.Component {
 		})
 	}
 	render() {
-		let display = this.state.click || this.state.mouse ? 'block': 'none';
 		const style={
 			'display': (this.state.click || this.state.mouse)? 'block': 'none',
-			'position':'absolute',
-			'top': this.state.top >= 0? this.state.top:'auto',
-			'bottom': this.state.bottom >= 0? this.state.bottom:'auto',
-			'left': this.state.left >= 0? this.state.left:'auto',
-			'right': this.state.right >= 0? this.state.right:'auto',
-			'backgroundColor': '#000',
-			'color':'#fff',
-			'padding':'10px',
-			'maxWidth': '300px',
-			'fontSize': '15px'
+			'top': this.state.top < 0? 'auto':this.state.top,
+			'bottom': this.state.bottom < 0? 'auto':this.state.bottom,
+			'left': this.state.left < 0? 'auto':this.state.left,
+			'right': this.state.right < 0? 'auto':this.state.right
 		}
 		return <div>
 			<p>{this.state.text}</p>
-			<div style={style}>{this.state.content}</div>
+			<div className="contentTooltip" style={style}>{this.state.content}</div>
 		</div>
 	}
 }
+
+module.exports = Text;
