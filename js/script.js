@@ -1,1 +1,1 @@
-ReactDOM.render(React.createElement(Text, { "data-url": "real-user-data.json" }), document.getElementById('tooltip'));
+ReactDOM.render(React.createElement(Text, { "data-url": "real-data.json" }), document.getElementById('tooltip'));
