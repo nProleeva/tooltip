@@ -93,7 +93,7 @@ class Text extends React.Component {
 		}
 		return <div>
 			<p>{this.state.text}</p>
-			<div className="contentTooltip" style={style}>{this.state.content}</div>
+			<p className="contentTooltip" style={style}>{this.state.content}</p>
 		</div>
 	}
 }
