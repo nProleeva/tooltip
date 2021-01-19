@@ -32,8 +32,11 @@ class Text extends React.Component {
 				state.top = top + 15;
 				state.bottom = -1;
 			}
-
-			if (left + 300 >= window.innerWidth && window.innerWidth > 600) {
+			if (window.matchMedia('(max-device-width: 1000px)').matches){
+				state.right = 30;
+				state.left = 30;
+			}
+			else if (left + 300 >= window.innerWidth) {
 				state.right = 0;
 				state.left = -1;
 			} else {
