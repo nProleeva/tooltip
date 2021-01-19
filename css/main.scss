@@ -9,7 +9,7 @@ body {
 	border-bottom:1px solid red;
 }
 p {
-	font-size: 18px;
+	font-size: 15px;
 }
 h1 {
 	font-size: 25px;
@@ -20,5 +20,8 @@ h1 {
 	color:#fff;
 	padding:10px;
 	max-width: 300px;
-	font-size: 15px;
+	@media only screen and (max-width: 600px) {
+		max-width: 600px;
+		font-size: 20px;
+	}
 }

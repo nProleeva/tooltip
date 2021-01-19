@@ -25,15 +25,15 @@ class Text extends React.Component {
 			state.content = event.target.getAttribute('tooltip');
 			let top = event.target.offsetTop,
 			    left = event.target.offsetLeft;
-			if ((top - event.target.closest('html').scrollTop + 20 + 35) >= window.innerHeight) {
+			if ((top - event.target.closest('html').scrollTop + 15 + 35) >= window.innerHeight) {
 				state.top = -1;
 				state.bottom = event.target.closest('html').offsetHeight - top;
 			} else {
-				state.top = top + 20;
+				state.top = top + 15;
 				state.bottom = -1;
 			}
 
-			if (left + 300 >= window.innerWidth) {
+			if (left + 300 >= window.innerWidth && window.innerWidth > 600) {
 				state.right = 0;
 				state.left = -1;
 			} else {
