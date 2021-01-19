@@ -1,5 +1,9 @@
+@import "font/font.scss";
 html {
 	position: relative;
+}
+body {
+  font-family: Open Sans;
 }
 .tooltip {
 	border-bottom:1px solid red;

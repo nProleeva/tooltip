@@ -17,6 +17,14 @@ module.exports = {
 				use: ['style-loader', 'css-loader', 'sass-loader']
 			},
 			{
+				test: /\.(eot|svg|ttf|woff|woff2)$/,
+				use: [
+                    {
+                        loader: 'file-loader?name=./css/font/Open_Sans/[name].[ext]'
+                    }
+                ]
+			},
+			{
 				test: /\.jsx$/,
 				exclude: /node_modules/,
 				use: {
